@@ -7,10 +7,8 @@
 [Jorge Sánchez- @jorge-sanchez-serafin, Mihail Dimitro-@mihail, Alicia Fernandez- @AliciaFernandezS, Lucia Álvarez-@luciaalvarezdiaz]
 
 ## Objetivos del trabajo
-
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]
 Los objetivos principales que persigue nuestro proyecto son:
--Desarrollar de manera práctica, mediante un Scape Room, los conceptos aprendidos en clase.
--Aprender a enfrentarnos a los problemas que nos plantee la programación y lograr resolverlos grácias a la cooperación del equipo.
--Lograr que funcione y que resulte lúdico el Scape Room.
+Desarrollar de manera práctica, mediante un Scape Room, los conceptos aprendidos en clase.
+Aprender a enfrentarnos a los problemas que nos plantee la programación y lograr resolverlos grácias a la cooperación del equipo.
+Lograr que funcione y que resulte lúdico el Scape Room.
  
