@@ -4,7 +4,7 @@ Vamos a realizar un scape room en el que el usuario tenga que ir superando acert
 
 ## Integrantes del equipo
 
-Jorge Sánchez- @jorge-sanchez-serafin, Mihail Dimitro-@mihail, Alicia Fernandez- @AliciaFernandezS, Lucia Álvarez-@luciaalvarezdiaz
+Jorge Sánchez- @jorge-sanchez-serafin, Mihail Dimitrov-@mihail, Alicia Fernandez- @AliciaFernandezS, Lucia Álvarez-@luciaalvarezdiaz
 
 ## Objetivos del trabajo
 Los objetivos principales que persigue nuestro proyecto son:
