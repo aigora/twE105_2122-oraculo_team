@@ -1,10 +1,10 @@
-# [Scape Room]
+# Scape Room
 
-[Vamos a realizar un scape room en el que el usuario tenga que ir superando acertijos y encontrando pruebas para descubrir quien ha sido el asesino. Habrá distintos niveles con distinta dificultad en la que se irán obteniendo recompensas o penalizaciones según las opciones elegidas por el usuario]
+Vamos a realizar un scape room en el que el usuario tenga que ir superando acertijos y encontrando pruebas para descubrir quien ha sido el asesino. Habrá distintos niveles con distinta dificultad en la que se irán obteniendo recompensas o penalizaciones según las opciones elegidas por el usuario.
 
 ## Integrantes del equipo
 
-[Jorge Sánchez- @jorge-sanchez-serafin, Mihail Dimitro-@mihail, Alicia Fernandez- @AliciaFernandezS, Lucia Álvarez-@luciaalvarezdiaz]
+Jorge Sánchez- @jorge-sanchez-serafin, Mihail Dimitrov-@mihail, Alicia Fernandez- @AliciaFernandezS, Lucia Álvarez-@luciaalvarezdiaz
 
 ## Objetivos del trabajo
 Los objetivos principales que persigue nuestro proyecto son:
