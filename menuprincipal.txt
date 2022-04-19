@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main ()
+{
+    int nivel;
+    char nombre[30];
+    printf("bienvenido a scape room\n");
+    printf("elige nombre de jugador:");
+    scanf("%30[^\n]",&nombre);
+    printf("elige nivel:\n a.bajo\n b.medio\n c.alto\n");
+    scanf(" %c",&nivel);
+    switch(nivel){
+    case 'a':
+        printf("%s ha elegido el nivel bajo",nombre);
+        break;
+    case 'b':
+        printf("%s ha elegido el nivel medio",nombre);
+        break;
+
+    case 'c':
+        printf("%s ha elegido el nivel alto",nombre);
+        break;
+    default:
+        printf("No quieres jugar, adios");
+        break;
+
+    }
+    return 0;
+}
