@@ -3,10 +3,11 @@ int main ()
 {
     int nivel;
     char nombre[30];
-    printf("bienvenido a scape room\n");
-    printf("elige nombre de jugador:");
+    printf("Bienvenido a nuestro ESCAPE ROOM creado por Oraculo Team\n");
+    printf("A continuacion escriba su nombre  para empezar....\n");
+    printf("Nombre del jugador:");
     scanf("%30[^\n]",&nombre);
-    printf("elige nivel:\n a.bajo\n b.medio\n c.alto\n");
+    printf("Eliga nivel:\n a.bajo\n b.medio\n c.alto\n");
     scanf(" %c",&nivel);
     switch(nivel){
     case 'a':
