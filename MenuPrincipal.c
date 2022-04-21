@@ -7,7 +7,7 @@ int main ()
     printf("A continuacion escriba su nombre  para empezar....\n");
     printf("Nombre del jugador:");
     scanf("%30[^\n]",&nombre);
-    printf("Eliga nivel:\n a.bajo\n b.medio\n c.alto\n");
+    printf("Eliga nivel:a.Bajo\n b.Medio\n c.Alto\n d.Salir\n");
     scanf(" %c",&nivel);
     switch(nivel){
     case 'a':
