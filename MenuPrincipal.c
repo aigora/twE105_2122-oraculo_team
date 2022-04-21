@@ -20,6 +20,11 @@ int main ()
     case 'c':
         printf("%s ha elegido el nivel alto",nombre);
         break;
+            
+    case 'd':
+        printf("%s ha elegido abandonar el juego",nombre);
+        break;
+            
     default:
         printf("No quieres jugar, adios");
         break;
