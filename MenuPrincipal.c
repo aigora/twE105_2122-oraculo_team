@@ -1,34 +1,48 @@
 #include <stdio.h>
 int main ()
 {
-    int nivel;
-    char nombre[30];
-    printf("Bienvenido a nuestro ESCAPE ROOM creado por Oraculo Team\n");
-    printf("A continuacion escriba su nombre  para empezar....\n");
+    int nivel, aux;
+    char nombre[30], a, b, c;
+
+    printf("********Bienvenido a nuestro ESCAPE ROOM creado por Oraculo Team.********\n\n");
+    printf("A continuacion escriba su nombre  para empezar....\n\n");
     printf("Nombre del jugador:");
     scanf("%30[^\n]",&nombre);
-    printf("Eliga nivel:a.Bajo\n b.Medio\n c.Alto\n d.Salir\n");
-    scanf(" %c",&nivel);
+    printf("Pulse 1: Para elegir dificultad.\n");
+    printf("Pulse 0: Para salir del juego.\n");
+    while(scanf("%i",&aux ), aux!=0 &&  aux != 1){
+        while(getchar() != '\n');
+        printf("Pulse 1 o 0!!Por favor!!!\n");
+    }
+    while(getchar() != '\n');
+
+    if(aux == 0){
+        printf("Hasta luego.Vuelva pronto");
+    }
+
+    if(aux == 1){
+
+        printf("\nEliga nivel:\n a.Bajo\n b.Medio\n c.Alto\n ");
+    while(scanf("%c",&nivel), nivel !='a' &&  nivel != 'b' &&  nivel != 'c'){
+        while(getchar() != '\n');
+        printf("Escriba bien la letra en minusculua!!Por favor!!!\n");
+    }
+    while(getchar() != '\n');
     switch(nivel){
     case 'a':
-        printf("%s ha elegido el nivel bajo",nombre);
+        printf("%s ha elegido el nivel Bajo.\nA contunacion empieza el juego...\nSUERTE!!!!!\n",nombre);
         break;
     case 'b':
-        printf("%s ha elegido el nivel medio",nombre);
+        printf("%s ha elegido el nivel Medio.\nA contunacion empieza el juego...\nSUERTE!!!!!\n",nombre);
         break;
 
     case 'c':
-        printf("%s ha elegido el nivel alto",nombre);
+        printf("%s ha elegido el nivel Alto.\nA contunacion empieza el juego...\nSUERTE!!!!!\n",nombre);
         break;
-            
-    case 'd':
-        printf("%s ha elegido abandonar el juego",nombre);
-        break;
-            
-    default:
-        printf("No quieres jugar, adios");
-        break;
+    }
 
     }
+   system("pause.");
     return 0;
+
 }
