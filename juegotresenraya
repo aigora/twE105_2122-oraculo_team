@@ -1,0 +1,296 @@
+#include <stdio.h>
+#include <time.h> //para generar numero aleatorio
+
+void llamada (char c [3][3]); //Prototipo de la funcion
+void valoresmatriz (char c [3][3]);
+void tablero (char c [3][3]);
+void fichajugador (char c [3][3]);
+void fichaordenador (char c [3][3]);
+int ganador (char c [3][3]);
+
+int main ()
+{
+
+    char c [3][3];
+
+    llamada (c); //Llama a las funciones y hace un refresco de pantalla
+
+    system ("pause");
+    return 0;
+}
+
+
+//Hacemos funcion llamada
+void llamada (char c [3][3])
+
+{
+    //Vamos a poner un contador porque tenemos un numero finito de tiradas
+    int i,j;
+
+    i = 0;
+    valoresmatriz (c);
+
+    do{
+        system ("cls"); //Borra todo lo q hay en pantalla
+        tablero (c);
+        if (i % 2 == 0) //Si el resto de i entre dos es igual a cero, vamos nosotros
+        {
+        fichajugador (c);
+        }
+        else {
+            fichaordenador (c);
+        }
+        j = ganador (c);
+        i++;
+        system ("cls"); //Borra todo lo q hay en pantalla
+        tablero (c);
+
+    }while (i<=9 && j==2);
+    if (j==0){
+        printf("Enhorabuena!! Has ganado!!\n\n");
+    }
+    else if (j==1){
+        printf ("Has perdido\n\n");
+    }
+    else{
+        printf ("Has empatado\n\n");
+    }
+}
+
+//Función para introducir los numeros en la matriz
+
+void valoresmatriz (char c [3] [3])
+{
+     int i, j;
+     char mat;
+
+     mat = '1';
+
+     for (i=0; i<3; i++){
+         for (j=0; j<3; j++){
+            c[i][j] = mat++; //asi el numero va aumentando
+         }
+     }
+
+}
+
+//Función para introducir yo los valores
+
+void fichajugador (char c [3][3])
+    {
+
+    int i,j,k;
+    char num;
+    //Tiene que ser un valor entre 1 y 9
+
+    do {
+        do{
+            printf ("Escribe el numero donde te gustaria poner la ficha: ");
+            fflush (stdin);
+            scanf ("%c",&num);
+          }while (num < '1' || num > '9' );
+    //Hay que controlar que no se puede coger el mismo numero dos veces
+
+        k=0;
+
+        switch (num){
+            case '1': {
+                i=0;
+                j=0;
+                if (c[i][j] == 'X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya esta ocupada, elige otra\n\n");
+                }
+                break;
+            }
+            case '2': {
+                i=0;
+                j=1;
+                if (c[i][j] == 'X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya está ocupada, elige otra\n\n");
+                }
+                break;
+            }
+            case '3': {
+                i=0;
+                j=2;
+                if (c[i][j] == 'X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya está ocupada, elige otra\n\n");
+                }
+                break;
+            }
+            case '4': {
+                i=1;
+                j=0;
+                if (c[i][j] == 'X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya está ocupada, elige otra\n\n");
+                }
+                break;
+            }
+            case '5': {
+                i=1;
+                j=1;
+                if (c[i][j] == 'X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya está ocupada, elige otra\n\n");
+                }
+                break;
+            }
+            case '6': {
+                i=1;
+                j=2;
+                if (c[i][j] == 'X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya está ocupada, elige otra\n\n");
+                }
+                break;
+            }
+            case '7': {
+                i=2;
+                j=0;
+                if (c[i][j] =='X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya está ocupada, elige otra\n\n");
+                }
+                break;
+            }
+            case '8': {
+                i=2;
+                j=1;
+                if (c[i][j] == 'X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya está ocupada, elige otra\n\n");
+                }
+                break;
+            }
+            case '9': {
+                i=2;
+                j=2;
+                if (c[i][j] == 'X' || c [i][j] == '0'){
+                    k=1;
+                    printf ("Esa casilla ya está ocupada, elige otra\n\n");
+                }
+                break;
+            }
+        }
+    }while (k==1);
+    c[i][j] = 'X';
+
+}
+
+//Funcion para que se creen las fichas aleatorias
+
+void fichaordenador (char c [3][3])
+{
+    int i,j,k;
+
+    srand (time(NULL));
+    //Tenemos que comprobar si las casillas estan ocupadas
+    do {
+       i = rand() % 3; //Nos va a dar un numero aleatorio entre 0 y 2
+       j = rand() % 3;
+       k=0;
+
+       if (c[i][j] == 'X' || c[i][j] == 'O'){
+        k=1;
+
+       }
+
+    }while (k==1); //Saldrá del bucle cuando k sea 0
+
+ c[i][j] = 'O';
+
+
+
+}
+//Función para el tablero
+
+void tablero (char c [3][3]){
+    int i, j;
+
+    for (i=0; i<3; i++){
+        for (j=0; j<3; j++){
+            printf ("| %c |", c[i][j]); //Lineas entre cada numero
+        }
+        printf ("\n---------------\n");//Raya que separa la fila
+    }
+}
+
+//Función para saber q has ganado
+
+int ganador (char c[3][3]){
+    if (c[0][0] == 'X' || c[0][0] == 'O'){
+        if (c[0][0]== c[0][1] && c[0][0] == c[0][2]){
+            if (c[0][0] == 'X'){
+                return 0; //Gana el jugador
+            }
+            else {
+                return 1; //Pierde
+            }
+        }
+       if (c[0][0]== c[1][0] && c[0][0] == c[2][0]){
+            if (c[0][0] == 'X'){
+                return 0; //Gana el jugador
+            }
+            else {
+                return 1; //Pierde
+                }
+       }
+    }
+ if (c[1][1] == 'X' || c[1][1] == 'O'){
+        if (c[1][1]== c[0][0] && c[1][1] == c[2][2]){
+            if (c[1][1] == 'X'){
+                return 0; //Gana el jugador
+            }
+            else {
+                return 1; //Pierde
+            }
+        }
+        if (c[1][1]== c[1][0] && c[1][1] == c[1][2]){
+            if (c[1][1] == 'X'){
+                return 0; //Gana el jugador
+            }
+            else {
+                return 1; //Pierde
+            }
+        }
+        if (c[1][1]== c[2][0] && c[1][1] == c[0][2]){
+            if (c[1][1] == 'X'){
+                return 0; //Gana el jugador
+            }
+            else {
+                return 1; //Pierde
+            }
+        }
+        if (c[1][1]== c[0][1] && c[1][1] == c[2][1]){
+            if (c[1][1] == 'X'){
+                return 0; //Gana el jugador
+            }
+            else {
+                return 1; //Pierde
+            }
+        }
+    }
+    if (c[2][2] == 'X' || c[2][2] == 'O'){
+        if (c[2][2] == c[2][0] && c [2][2] == c[2][1]){
+            if (c[2][2] == 'X'){
+                return 0; //Gana el jugador
+            }
+            else {
+                return 1; //Pierde
+            }
+        }
+           if (c[2][2] == c[0][2] && c [2][2] == c[1][2]){
+            if (c[2][2] == 'X'){
+                return 0; //Gana el jugador
+            }
+            else {
+                return 1; //Pierde
+            }
+        }
+    }
+    return 2;
+}
