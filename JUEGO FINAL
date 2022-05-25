@@ -142,6 +142,8 @@ void historia() {
     printf("el vegetal y el mineral, además de realizaciones humanas. ¡ Era la pasión del vizconde Rerabord!\n La comisaria se adentra en la misteriosa sala y pronto se le une el oficial de policia.\n");
     printf("-Quienes descubrieron los cuerpos tueron el señor aqui presente y el hijo del vizconde -explica, mientras que Marta observa las siluetas blancas que indican la posición de los cadáveres en el suelo.\n");
     printf("-iHabia más personas?\n-No -niega Marcos, moviendo la cabeza.\n-¿Vio usted huir a alguien?\n-No, señora -repite el hombre, con seguridad-. Solo estabamos Cristóbal y yo\n");
-    return 0;
+   system("pause>>null \n\n"); //Paramos el programa sin el mensaje.
+   system("cls");
+   return 0;
 
 }
