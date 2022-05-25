@@ -5,7 +5,11 @@
 
 void titulo();
 void menu();                   //Titulo principal en ascii
-void historia();
+void historia1();
+void historia2();
+void investigacion1();
+void investigacion2();
+void resolver();
 
 int main(void) {
 	titulo();
@@ -44,10 +48,11 @@ void menu(){
         printf("%s ha elegido el nivel Bajo.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
         system("pause>>null \n\n");
         system("cls");
-        historia();
+        historia1();
+
 int n, a,i=15;
 char r;
-printf("Bienvenido al minijuego a del escape room \n");
+printf("Para que Marcos encuentre los utensilios para arreglar la gotera, primero tiene que encontrar cual era el numero de la llave del cuarto de las herramientas.\n");
 printf(".................... \n");
 srand(time(NULL));
 n = rand() % 100 +1;
@@ -64,7 +69,12 @@ printf("\nte pasas \n\n");
 
 }else ;
 if(a==n){
- printf("GANASTE!!!!  ");
+ printf("GANASTE!!!!\n ");
+ system("pause>>null \n\n");
+ system("cls");
+ historia2();
+ investigacion1();
+ investigacion2();
  return 1;
 }else;
 }
@@ -77,16 +87,17 @@ break;
         printf("%s ha elegido el nivel Medio.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
         system("pause>>null \n\n");
         system("cls");
-        historia();
-        
+        historia1();
+        historia2();
+
         break;
 
     case 'c':
         printf("%s ha elegido el nivel Alto.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
         system("pause>>null \n\n");
         system("cls");
-        historia();
-        
+
+
         break;
     }
 
@@ -111,39 +122,39 @@ printf("\n\n\n");
 	system("pause>>null \n\n"); //Paramos el programa sin el mensaje.
 	system("cls");
 }
-void historia() {
-    printf("La sombra de la torre del homenaje que dominaba en la cúspide almenada del castillo de Masterra se recortaba en el alba naciente y  brumosa de la campiña pirenaica. ");
-    printf("En el ala príncipal de esta suntuosa morada del siglo XV, Marcos, el hombre que se encargaba de su mantenimiento, andaba con pasorápido por un pasillo abovedado de la planta baja. ");
-    printf("La noche anterior, el vizconde Enrique de Rerabord, el propietario, había detectado una gotera en la sala de baile. Había que reparla rápidamente, antes de la tormenta anunciada para ese fin de semana.\n");
-    printf("De repente, dos disparos desgarraron el silencio matutino. Marcos localizó su procedencia fácilmente. ");
-    printf("Habían disparado desde el gabinete de curiosidades donde Enrique de Rerabord amontonaba sus recuerdos de viaje y muchos otros objetos extraños.\n");
-    printf("Marcos echó a correr y en su carrera se cruzó con Magda, la sobrina del vizconde, y con Arsenio, su marido. Ambos, asustados, habían salido precipitadamente de su habitación.");
-    printf("Se encontró también con Cristóbal, el hijo del vizconde y su heredero, que le acompañó.\n");
-    printf("Una vez llegaron delante del gabinete de curiosidades, situado en la torre este del castillo, Cristóbal propuso apostarse frente a la puerta vidriada de acceso al jardin para impedir que el eventual ladrón");
-    printf("escapara por alli, después de comprobar que Marcos no podría abrir la puerta interior, que aparentemente habla sido cerrada.");
-    printf("Desde fuera, Cristóbal apoyó su frente contra el cristal frío y escudriñó el interior de la pieza. Su aliento tibio empañó la vidriera de varios siglos de antigüedad y no tardó en descubrir los cuerpos");
-    printf("de sus padres, que yacian sobre el entarimado. El joven cogió una piedra gruesa y la lanzo contra la puerta vidriada con el fin de entrar en el gabinete de curiosidades, herméticamente cerrado.\n");
+void historia1() {
+    printf("Nos encontramos en el Castillo de Masterra, donde Marcos, el hombre que se encargaba de su mantenimiento, andaba por el pasillo de la planta baja. Iba hacia la sala de baile ya que se aproximaba una tormenta y había una gotera que arreglar.\n");
     system("pause>>null \n\n");
     system("cls");
-    printf("La investigacion\n\n");
-    printf("La comisaria Marta Sorbes conduce un Megane oficial de color gris. Detiene el vehiculo delante de una gran verja de hierro forjado y espera a que se abra automáticamente. ");
-    printf("Después conduce a lo largo de una avenida bordeada de árboles que atraviesa un parque francés y que desciende luego hasta el castillo de Masterra.\n");
-    printf("Estaciona delante de la entrada principal, donde la esperan sus colegas y Marcos, el hombre que cuida la propiedad. El sol ha salido ya hace algunas horas;");
-    printf("sin embargo, sus rayos no pasan todavia por encima de la imponente torre del homenaje que domina el patio de honor. ");
-    printf("Marta echa un rápido vistazo al edificio, antes de subir rápidamente los escalones que conducen al umbral de una gran puerta.\n");
-    printf("-Comisaria Sorbes -se presenta la joven policia estrechando la mano de un oficial de la comisaría que la espera alli desde hace ya rato. -Me he perdido -añade.\n");
-    printf("-Es usted nueva? -pregunta el oficial.\n-SI, acabo de ser destinada a esta comisaria.\n-No se ofenda, pero creo que su presencia ya no es necesaria-continúa diciendo el oficial.\n");
-    printf("-Qué tenemos? -pregunta Marta sin tener en cuenta la observación.\n");
-    printf("-Hemos encontrado los cadáveres del vizconde y de la vizcondesa de Rerabord. Es evidente que él le ha disparado a su esposa antes de suicidarse. ¡Asunto cerrado!\n");
-    printf("-Deje que me forme mi propia opinión -objeta Marta- ¿Dónde está la escena del crimen?\n -En el gabinete de curiosidades -responde Marcos.\n");
-    printf("-Puede indicarme el camino?\n La comisaria Sorbes entra en la pieza y lanza una exclamación de asombro.");
-    printf("Las paredes están cubiertas de vitrinas en las que se amontonan centenares de objetos insólitos, desde un ornitorrinco disecado a una rosa de los vientos.\n");
-    printf("-Los gabinetes de curiosidades existen desde los siglos XVI y XVII -explica Marcos-. Son salas en las que se coleccionan y se muestran multitud de objetos únicos o extraños que representan los tres reinos:");
-    printf("el vegetal y el mineral, además de realizaciones humanas. ¡ Era la pasión del vizconde Rerabord!\n La comisaria se adentra en la misteriosa sala y pronto se le une el oficial de policia.\n");
-    printf("-Quienes descubrieron los cuerpos tueron el señor aqui presente y el hijo del vizconde -explica, mientras que Marta observa las siluetas blancas que indican la posición de los cadáveres en el suelo.\n");
-    printf("-iHabia más personas?\n-No -niega Marcos, moviendo la cabeza.\n-¿Vio usted huir a alguien?\n-No, señora -repite el hombre, con seguridad-. Solo estabamos Cristóbal y yo\n");
-   system("pause>>null \n\n"); //Paramos el programa sin el mensaje.
-   system("cls");
-   return 0;
-
+}
+void historia2(){
+    printf("De repente, dos disparos interrumpieron el silencio de la mañana. Marcos supo que habían disparado desde el gabinete de curiosidades donde el vizconde guardaba los recuerdos de sus viajes.\n ");
+    printf("Marcos echo a correr y en su carrera se cruzo con Magda, la sobrina del vizconde, y con Arsenio, su marido. Salían precipitados de sus habitaciones. También se encontró con Cristóbal, el hijo y heredero del vizconde.\n");
+    printf("Llegaron al gabinete de curiosidades, situado en la torre del catillo. Cristóbal pensó en ponerse delante de la puerta de vidrio con acceso al jardín para atrapar al ladrón, ya que la puerta interior no se podía abrir, ya que estaba cerrada. ");
+    printf("Cristóbal se apoyo en la puerta vidriada para ver el interior de la sala y descubrió los cuerpos de sus padres. El joven estrello una piedra contra la puerta para entrar al gabinete que estaba herméticamente cerrado.\n");
+    system("pause>>null \n\n");
+    system("cls");
+}
+void investigacion1(){
+    printf("Los policías de esta investigación opinan que el marido ha matado a su esposa antes de suicidarse. Pero tú eres un experto en este tipo de casos y no crees que los acontecimientos hayan sucedido así.\n");
+    system("pause>>null \n\n");
+    system("cls");
+}
+void investigacion2(){
+    printf("Entras al gabinete y lo primero que ves son un montón de vitrinas con centenares de objetos extravagantes. Marcos te explica que era la pasión del vizconde coleccionar este tipo de cosas.\n");
+    printf("- ¿Quién encontró los cuerpos? - preguntas\n-Cristóbal y yo, señora- responde Marcos\n-¿vio a alguien huir?\n-No, señora\n-Aquí huele a tabaco. - comentas\n-Al vizconde le gustaba fumar puros en el gabinete.\nLos policías te enseñan la pistola que se encuentra en el suelo, como presunta arma del homicidio.\n");
+    printf("Marcos explica que es una pistola antigua de bolsillo de doble cañón, dos disparos, con pólvora. Y los policías agregan que tiene las huellas del vizconde.\nLa habitación cuenta con tres salidas, una puerta que da al vestíbulo, u dos puertas vidriadas que se abren al jardín. Las dos con cerrojos\n");
+    printf("-todas las salidas estaban cerradas por dentro, herméticamente- Añade Marcos\n-Bien interrogare a Cristóbal y luego os contare por que esta sala no estaba cerrada herméticamente- dices saliendo del gabinete.\n");
+    printf(" La habitación de Cristóbal se encuentra en el primer piso del castillo.\nLe preguntas sobre la relación de sus padres, con lo que contesta que sus padres se llevaban mal. Que su madre no quería seguir viviendo en el castillo, pero su padre no se quería ir.\n");
+    printf("Cristóbal te comenta que cuesta mucho mantener el castillo pero que su padre le dedico media vida y parte de su fortuna.\n- ¿Cuándo entrasteis al gabinete, notaste humo?\n");
+    printf("-No, solo olía a tabaco, pero aparte de eso no había ningún tipo de humo- responde Cristóbal sorprendido\n-Bien pues le pediré que no deje el castillo antes de que me vaya. Y cuando lo deje será para ir a la cárcel.");
+    system("pause>>null \n\n");
+    system("cls");
+}
+void resolver(){
+    printf("El gabinete no está herméticamente cerrado porque si lo hubiera estado el sitio olería a pólvora, por lo que los disparos no se hicieron dentro del gabinete.\n");
+    printf("Se hicieron desde el exterior y fue Cristóbal quien disparo a través de la puerta vidriada, y volvió al pasillo a esperar a Marcos. Cuando llegaron los dos a la puerta tiro la piedra contra los mismos agujeros de bala. Borro sus huellas y dejo la pistola en la mano de su padre.\n");
+    printf("Cristóbal quería heredar la fortuna de su padre y su padre le reprochaba constantemente sus malos hábitos y que le iba a desheredar, esta fue la solución de Cristóbal.");
+    system("pause>>null \n\n");
+    system("cls");
 }
