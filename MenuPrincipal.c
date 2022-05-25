@@ -21,7 +21,7 @@ void menu(){
     scanf("%30[^\n]",&nombre);
     printf("Pulse 1: Para elegir dificultad.\n");
     printf("Pulse 0: Para salir del juego.\n");
-    while(scanf("%i",&aux ), aux!=0 &&  aux != 1){
+   while (scanf("%i", &aux)==0 || (aux!=0 && aux!=1 )) {
         while(getchar() != '\n');
         printf("Pulse 1 o 0!!Por favor!!!\n");
     }
