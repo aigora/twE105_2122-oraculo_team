@@ -5,6 +5,7 @@
 
 void titulo();
 void menu();                   //Titulo principal en ascii
+void historia();
 
 int main(void) {
 	titulo();
@@ -41,8 +42,9 @@ void menu(){
     switch(nivel){
     case 'a':
         printf("%s ha elegido el nivel Bajo.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
-system("pause>>null \n\n");
-    system("cls");
+        system("pause>>null \n\n");
+        system("cls");
+        historia();
 int n, a,i=15;
 char r;
 printf("Bienvenido al minijuego a del escape room \n");
@@ -73,10 +75,18 @@ break;
 
     case 'b':
         printf("%s ha elegido el nivel Medio.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
+        system("pause>>null \n\n");
+        system("cls");
+        historia();
+        
         break;
 
     case 'c':
         printf("%s ha elegido el nivel Alto.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
+        system("pause>>null \n\n");
+        system("cls");
+        historia();
+        
         break;
     }
 
@@ -100,4 +110,38 @@ printf("\n\n\n");
 
 	system("pause>>null \n\n"); //Paramos el programa sin el mensaje.
 	system("cls");
+}
+void historia() {
+    printf("La sombra de la torre del homenaje que dominaba en la cúspide almenada del castillo de Masterra se recortaba en el alba naciente y  brumosa de la campiña pirenaica. ");
+    printf("En el ala príncipal de esta suntuosa morada del siglo XV, Marcos, el hombre que se encargaba de su mantenimiento, andaba con pasorápido por un pasillo abovedado de la planta baja. ");
+    printf("La noche anterior, el vizconde Enrique de Rerabord, el propietario, había detectado una gotera en la sala de baile. Había que reparla rápidamente, antes de la tormenta anunciada para ese fin de semana.\n");
+    printf("De repente, dos disparos desgarraron el silencio matutino. Marcos localizó su procedencia fácilmente. ");
+    printf("Habían disparado desde el gabinete de curiosidades donde Enrique de Rerabord amontonaba sus recuerdos de viaje y muchos otros objetos extraños.\n");
+    printf("Marcos echó a correr y en su carrera se cruzó con Magda, la sobrina del vizconde, y con Arsenio, su marido. Ambos, asustados, habían salido precipitadamente de su habitación.");
+    printf("Se encontró también con Cristóbal, el hijo del vizconde y su heredero, que le acompañó.\n");
+    printf("Una vez llegaron delante del gabinete de curiosidades, situado en la torre este del castillo, Cristóbal propuso apostarse frente a la puerta vidriada de acceso al jardin para impedir que el eventual ladrón");
+    printf("escapara por alli, después de comprobar que Marcos no podría abrir la puerta interior, que aparentemente habla sido cerrada.");
+    printf("Desde fuera, Cristóbal apoyó su frente contra el cristal frío y escudriñó el interior de la pieza. Su aliento tibio empañó la vidriera de varios siglos de antigüedad y no tardó en descubrir los cuerpos");
+    printf("de sus padres, que yacian sobre el entarimado. El joven cogió una piedra gruesa y la lanzo contra la puerta vidriada con el fin de entrar en el gabinete de curiosidades, herméticamente cerrado.\n");
+    system("pause>>null \n\n");
+    system("cls");
+    printf("La investigacion\n\n");
+    printf("La comisaria Marta Sorbes conduce un Megane oficial de color gris. Detiene el vehiculo delante de una gran verja de hierro forjado y espera a que se abra automáticamente. ");
+    printf("Después conduce a lo largo de una avenida bordeada de árboles que atraviesa un parque francés y que desciende luego hasta el castillo de Masterra.\n");
+    printf("Estaciona delante de la entrada principal, donde la esperan sus colegas y Marcos, el hombre que cuida la propiedad. El sol ha salido ya hace algunas horas;");
+    printf("sin embargo, sus rayos no pasan todavia por encima de la imponente torre del homenaje que domina el patio de honor. ");
+    printf("Marta echa un rápido vistazo al edificio, antes de subir rápidamente los escalones que conducen al umbral de una gran puerta.\n");
+    printf("-Comisaria Sorbes -se presenta la joven policia estrechando la mano de un oficial de la comisaría que la espera alli desde hace ya rato. -Me he perdido -añade.\n");
+    printf("-Es usted nueva? -pregunta el oficial.\n-SI, acabo de ser destinada a esta comisaria.\n-No se ofenda, pero creo que su presencia ya no es necesaria-continúa diciendo el oficial.\n");
+    printf("-Qué tenemos? -pregunta Marta sin tener en cuenta la observación.\n");
+    printf("-Hemos encontrado los cadáveres del vizconde y de la vizcondesa de Rerabord. Es evidente que él le ha disparado a su esposa antes de suicidarse. ¡Asunto cerrado!\n");
+    printf("-Deje que me forme mi propia opinión -objeta Marta- ¿Dónde está la escena del crimen?\n -En el gabinete de curiosidades -responde Marcos.\n");
+    printf("-Puede indicarme el camino?\n La comisaria Sorbes entra en la pieza y lanza una exclamación de asombro.");
+    printf("Las paredes están cubiertas de vitrinas en las que se amontonan centenares de objetos insólitos, desde un ornitorrinco disecado a una rosa de los vientos.\n");
+    printf("-Los gabinetes de curiosidades existen desde los siglos XVI y XVII -explica Marcos-. Son salas en las que se coleccionan y se muestran multitud de objetos únicos o extraños que representan los tres reinos:");
+    printf("el vegetal y el mineral, además de realizaciones humanas. ¡ Era la pasión del vizconde Rerabord!\n La comisaria se adentra en la misteriosa sala y pronto se le une el oficial de policia.\n");
+    printf("-Quienes descubrieron los cuerpos tueron el señor aqui presente y el hijo del vizconde -explica, mientras que Marta observa las siluetas blancas que indican la posición de los cadáveres en el suelo.\n");
+    printf("-iHabia más personas?\n-No -niega Marcos, moviendo la cabeza.\n-¿Vio usted huir a alguien?\n-No, señora -repite el hombre, con seguridad-. Solo estabamos Cristóbal y yo\n");
+    return 0;
+
 }
