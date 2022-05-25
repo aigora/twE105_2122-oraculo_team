@@ -27,7 +27,8 @@ if(a==n){
  return 1;
 }else;
 }
-printf("\n perdiste el número es %i", n);
+printf("\n perdiste el nÃºmero es %i", n);
 
 return 0;
 }
+
