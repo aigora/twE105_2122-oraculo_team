@@ -2,6 +2,20 @@
 #include<string.h>
 #include<conio.h>
 #include<time.h>
+#define INTRO 13
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<conio.h>
+#include<time.h>
+
+
+#define NUM_PALABRAS 16           //Numero de palabras
+#define MAX_STRING 20            //Longitud máxima de la cadena inicial.
+#define NUM_INTENTOS 5
 
 void titulo();
 void menu();                   //Titulo principal en ascii
@@ -12,6 +26,7 @@ void investigacion2();
 void resolver();
 
 int main(void) {
+
 	titulo();
 	menu();}
 
@@ -19,8 +34,8 @@ void menu(){
     int nivel, aux;
     char nombre[30], a, b, c;
 
-    printf("***Bienvenido a nuestro ESCAPE ROOM creado por Oraculo Team.***\n\n");
-    printf("A continuacion escriba su nombre  para empezar....\n\n");
+    printf("***Bienvenido a nuestro ESCAPE ROOM creado por Or%cculo Team.***\n\n",163);
+    printf("A continuaci%cn escriba su nombre  para empezar....\n\n",162);
     printf("Nombre del jugador:");
     scanf("%30[^\n]",&nombre);
     printf("Pulse 1: Para elegir dificultad.\n");
@@ -32,40 +47,40 @@ void menu(){
     while(getchar() != '\n');
 
     if(aux == 0){
-        printf("Hasta luego.Vuelva pronto\n");
+        printf("Hasta luego. Vuelva pronto\n");
     }
 
     if(aux == 1){
 
-        printf("\nEliga nivel:\n a.Bajo\n b.Medio\n c.Alto\n ");
+        printf("\nElija nivel:\n a.Bajo\n b.Medio\n c.Alto\n ");
     while(scanf("%c",&nivel), nivel !='a' &&  nivel != 'b' &&  nivel != 'c'){
         while(getchar() != '\n');
-        printf("Escriba bien la letra en minusculua!!Por favor!!!\n");
+        printf("Escriba bien la letra en min%csculua!!Por favor!!!\n",163);
     }
     while(getchar() != '\n');
     switch(nivel){
     case 'a':
-        printf("%s ha elegido el nivel Bajo.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
+        printf("%s ha elegido el nivel Bajo.\nA continuaci%cn empieza el juego...\nSUERTE!!!!!\n",nombre,162);
         system("pause>>null \n\n");
         system("cls");
         historia1();
 
 int n, a,i=15;
 char r;
-printf("Para que Marcos encuentre los utensilios para arreglar la gotera, primero tiene que encontrar cual era el numero de la llave del cuarto de las herramientas.\n");
+printf("Para que Marcos encuentre los utensilios para arreglar la gotera, primero tiene que encontrar cual era el n%cmero de la llave del cuarto de las herramientas.\n",163);
 printf(".................... \n");
 srand(time(NULL));
 n = rand() % 100 +1;
 for(i;i>=1;i--){
 printf("\n te quedan %i intentos \n", i);
-printf("escribe un numero(0-100) : ");
+printf("escribe un n%cmero(0-100) : ",163);
 
 scanf("%i", & a);
 
 if(a<n){
-printf("\nte quedas corto \n\n");
+printf("\nTe quedas corto \n\n");
 }else if(a>n){
-printf("\nte pasas \n\n");
+printf("\nTe pasas \n\n");
 
 }else ;
 if(a==n){
@@ -78,13 +93,13 @@ if(a==n){
  return 1;
 }else;
 }
-printf("\n perdiste el n�mero es %i", n);
+printf("\n Perdiste el n%Cmero es %i",163,n);
 
 return 0;
 break;
 
     case 'b':
-        printf("%s ha elegido el nivel Medio.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
+        printf("%s Ha elegido el nivel Medio.\nA continuaci%cn empieza el juego...\nSUERTE!!!!!\n",nombre,162);
         system("pause>>null \n\n");
         system("cls");
         historia1();
@@ -93,7 +108,7 @@ break;
         break;
 
     case 'c':
-        printf("%s ha elegido el nivel Alto.\nA continuacion empieza el juego...\nSUERTE!!!!!\n",nombre);
+        printf("%s Ha elegido el nivel Alto.\nA continuaci%cn empieza el juego...\nSUERTE!!!!!\n",nombre,162);
         system("pause>>null \n\n");
         system("cls");
 
@@ -123,38 +138,40 @@ printf("\n\n\n");
 	system("cls");
 }
 void historia1() {
-    printf("Nos encontramos en el Castillo de Masterra, donde Marcos, el hombre que se encargaba de su mantenimiento, andaba por el pasillo de la planta baja. Iba hacia la sala de baile ya que se aproximaba una tormenta y había una gotera que arreglar.\n");
+    printf("Nos encontramos en el Castillo de Masterra, donde Marcos, el hombre que se encargaba de su mantenimiento, andaba por el pasillo de la planta baja. Iba hacia la sala de baile ya que se aproximaba una tormenta y hab%ca una gotera que arreglar.\n",161);
     system("pause>>null \n\n");
     system("cls");
 }
 void historia2(){
-    printf("De repente, dos disparos interrumpieron el silencio de la mañana. Marcos supo que habían disparado desde el gabinete de curiosidades donde el vizconde guardaba los recuerdos de sus viajes.\n ");
-    printf("Marcos echo a correr y en su carrera se cruzo con Magda, la sobrina del vizconde, y con Arsenio, su marido. Salían precipitados de sus habitaciones. También se encontró con Cristóbal, el hijo y heredero del vizconde.\n");
-    printf("Llegaron al gabinete de curiosidades, situado en la torre del catillo. Cristóbal pensó en ponerse delante de la puerta de vidrio con acceso al jardín para atrapar al ladrón, ya que la puerta interior no se podía abrir, ya que estaba cerrada. ");
-    printf("Cristóbal se apoyo en la puerta vidriada para ver el interior de la sala y descubrió los cuerpos de sus padres. El joven estrello una piedra contra la puerta para entrar al gabinete que estaba herméticamente cerrado.\n");
+    printf("De repente, dos disparos interrumpieron el silencio de la ma%cana. Marcos supo que hab%can disparado desde el gabinete de curiosidades donde el vizconde guardaba los recuerdos de sus viajes.\n ",164,161);
+    printf("Marcos echo a correr y en su carrera se cruz%c con Magda, la sobrina del vizconde, y con Arsenio, su marido. Sal%can precipitados de sus habitaciones. Tambi%cn se encontr%c con Crist%cbal, el hijo y heredero del vizconde.\n",162,161,130,162,162);
+    printf("Llegaron al gabinete de curiosidades, situado en la torre del catillo. Crist%cbal pens%o en ponerse delante de la puerta de vidrio con acceso al jard%cn para atrapar al ladr%cn, ya que la puerta interior no se pod%ca abrir, ya que estaba cerrada.",162,162,161,162);
+    printf("Crist%cbal se apoyo en la puerta vidriada para ver el interior de la sala y descubri%c los cuerpos de sus padres. El joven estrello una piedra contra la puerta para entrar al gabinete que estaba herm%cticamente cerrado.\n",162,162,130);
     system("pause>>null \n\n");
     system("cls");
 }
 void investigacion1(){
-    printf("Los policías de esta investigación opinan que el marido ha matado a su esposa antes de suicidarse. Pero tú eres un experto en este tipo de casos y no crees que los acontecimientos hayan sucedido así.\n");
+    printf("Los polic%cas de esta investigaci%cn opinan que el marido ha matado a su esposa antes de suicidarse. Pero t%c eres un experto en este tipo de casos y no crees que los acontecimientos hayan sucedido as%c.\n",161,162,163,161);
     system("pause>>null \n\n");
     system("cls");
 }
 void investigacion2(){
-    printf("Entras al gabinete y lo primero que ves son un montón de vitrinas con centenares de objetos extravagantes. Marcos te explica que era la pasión del vizconde coleccionar este tipo de cosas.\n");
-    printf("- ¿Quién encontró los cuerpos? - preguntas\n-Cristóbal y yo, señora- responde Marcos\n-¿vio a alguien huir?\n-No, señora\n-Aquí huele a tabaco. - comentas\n-Al vizconde le gustaba fumar puros en el gabinete.\nLos policías te enseñan la pistola que se encuentra en el suelo, como presunta arma del homicidio.\n");
-    printf("Marcos explica que es una pistola antigua de bolsillo de doble cañón, dos disparos, con pólvora. Y los policías agregan que tiene las huellas del vizconde.\nLa habitación cuenta con tres salidas, una puerta que da al vestíbulo, u dos puertas vidriadas que se abren al jardín. Las dos con cerrojos\n");
-    printf("-todas las salidas estaban cerradas por dentro, herméticamente- Añade Marcos\n-Bien interrogare a Cristóbal y luego os contare por que esta sala no estaba cerrada herméticamente- dices saliendo del gabinete.\n");
-    printf(" La habitación de Cristóbal se encuentra en el primer piso del castillo.\nLe preguntas sobre la relación de sus padres, con lo que contesta que sus padres se llevaban mal. Que su madre no quería seguir viviendo en el castillo, pero su padre no se quería ir.\n");
-    printf("Cristóbal te comenta que cuesta mucho mantener el castillo pero que su padre le dedico media vida y parte de su fortuna.\n- ¿Cuándo entrasteis al gabinete, notaste humo?\n");
-    printf("-No, solo olía a tabaco, pero aparte de eso no había ningún tipo de humo- responde Cristóbal sorprendido\n-Bien pues le pediré que no deje el castillo antes de que me vaya. Y cuando lo deje será para ir a la cárcel.");
+    printf("Entras al gabinete y lo primero que ves son un mont%cn de vitrinas con centenares de objetos extravagantes. Marcos te explica que era la pasi%cn del vizconde coleccionar este tipo de cosas.\n",162,162);
+    printf("- Qui%cn encontr%c los cuerpos? - preguntas\n-Crist%cbal y yo, se%cora- responde Marcos\n-vio a alguien huir?\n-No, se%cora\n-Aqu%c huele a tabaco. - comentas\n-Al vizconde le gustaba fumar puros en el gabinete.\nLos polic%cas te ense%can la pistola que se encuentra en el suelo, como presunta arma del homicidio.\n",130,162,162,164,164,161,161,164);
+    printf("Marcos explica que es una pistola antigua de bolsillo de doble ca%c%cn, dos disparos, con p%clvora. Y los polic%cas agregan que tiene las huellas del vizconde.\nLa habitaci%cn cuenta con tres salidas, una puerta que da al vest%cbulo, y dos puertas vidriadas que se abren al jard%cn. Las dos con cerrojos\n",164,162,162,161,162,161,161);
+    printf("-todas las salidas estaban cerradas por dentro, herm%cticamente- A%cade Marcos\n-Bien interrogar%c a Crist%cbal y luego os contar%c por que esta sala no estaba cerrada herm%cticamente- dices saliendo del gabinete.\n",130,164,120,162,130,130);
+    printf(" La habitaci%cn de Crist%cbal se encuentra en el primer piso del castillo.\nLe preguntas sobre la relaci%cn de sus padres, con lo que contesta que sus padres se llevaban mal. Que su madre no quer%ca seguir viviendo en el castillo, pero su padre no se quer%ca ir.\n",162,162,162,130,130);
+    printf("Crist%cbal te comenta que cuesta mucho mantener el castillo pero que su padre le dedic%c media vida y parte de su fortuna.\n- Cu%cndo entrasteis al gabinete, notaste humo?\n",162,162,160);
+    printf("-No, solo ol%ca a tabaco, pero aparte de eso no hab%ca ning%cn tipo de humo- responde Crist%cbal sorprendido\n-Bien pues le pedir%c que no deje el castillo antes de que me vaya. Y cuando lo deje ser%c para ir a la c%crcel.",161,161,163,162,130,160);
     system("pause>>null \n\n");
     system("cls");
 }
 void resolver(){
-    printf("El gabinete no está herméticamente cerrado porque si lo hubiera estado el sitio olería a pólvora, por lo que los disparos no se hicieron dentro del gabinete.\n");
-    printf("Se hicieron desde el exterior y fue Cristóbal quien disparo a través de la puerta vidriada, y volvió al pasillo a esperar a Marcos. Cuando llegaron los dos a la puerta tiro la piedra contra los mismos agujeros de bala. Borro sus huellas y dejo la pistola en la mano de su padre.\n");
-    printf("Cristóbal quería heredar la fortuna de su padre y su padre le reprochaba constantemente sus malos hábitos y que le iba a desheredar, esta fue la solución de Cristóbal.");
+    printf("El gabinete no est%c herm%cticamente cerrado porque si lo hubiera estado el sitio oler%ca a p%clvora, por lo que los disparos no se hicieron dentro del gabinete.\n",160,130,161,162);
+    printf("Se hicieron desde el exterior y fue Crist%cbal quien disparo a trav%cs de la puerta vidriada, y volvi%c al pasillo a esperar a Marcos. Cuando llegaron los dos a la puerta tiro la piedra contra los mismos agujeros de bala. Borro sus huellas y dejo la pistola en la mano de su padre.\n",162,130,162);
+    printf("Crist%cbal quer%ca heredar la fortuna de su padre y su padre le reprochaba constantemente sus malos h%cbitos y que le iba a desheredar, esta fue la soluci%cn de Crist%cbal.",162,161,160,162,162);
     system("pause>>null \n\n");
     system("cls");
 }
+
+
