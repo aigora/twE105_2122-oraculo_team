@@ -39,10 +39,30 @@ int main(void) {
 void menu() {
     int  aux;
     char nombre[30], a, b, c, nivel;
-
-
+    char p[100];
 
     printf("***Bienvenido a nuestro ESCAPE ROOM creado por Or%cculo Team.***\n\n",163);
+    printf("Antes de empezar el juego lea las instrucciones del juego\n\n");
+    system("pause>>null \n\n");
+    system("cls");
+
+    FILE *pf;
+
+    pf = fopen("Instrucciones.txt","r");
+
+    if (pf == NULL)
+     {
+      printf("Error al abrir el fichero.\n");
+      return -1;
+    }
+    while(!feof(pf)){
+    fgets(p,100,pf);
+    printf("%s",p);
+    }
+    printf("\n");
+    system("pause>>null \n\n");
+    system("cls");
+
     printf("A continuaci%cn escriba su nombre  para empezar....\n\n",162);
     printf("Nombre del jugador:");
     scanf("%30[^\n]", & nombre);
