@@ -41,9 +41,25 @@ int main(void) {
 
 
 void menu() {
+
     int  aux;
     char nombre[30], a, b, c, nivel;
     char p[100];
+    typedef struct{
+int d;
+int m;
+int a;
+
+}date;
+
+typedef struct{
+char n[10];
+char a[10];
+int t;
+date fn;
+
+}contacto;
+
 
     printf("**Bienvenido a nuestro ESCAPE ROOM creado por Or%cculo Team.**\n\n",163);
     printf("Antes de empezar el juego lea las instrucciones del juego\n\n");
@@ -67,9 +83,17 @@ void menu() {
     system("pause>>null \n\n");
     system("cls");
 
-    printf("A continuaci%cn escriba su nombre  para empezar....\n\n",162);
-    printf("Nombre del jugador:");
-    scanf("%30[^\n]", & nombre);
+    contacto persona;
+printf("nombre: ");
+scanf("%10s",persona.n);
+printf("apodo: ");
+scanf("%10s",persona.a);
+printf("telefono(recibiras notificaciones de las novedades del juego): ");
+scanf("%i",&persona.t);
+printf("fecha de nacimiento : ");
+scanf("%i %i %i",&persona.fn.d,&persona.fn.m,&persona.fn.a);
+printf("\n%s\n%s\n%i-%i-%i\n",persona.n,persona.a,persona.fn.d,persona.fn.m,persona.fn.a);
+
     printf("Pulse 1: Para elegir dificultad.\n");
     printf("Pulse 0: Para salir del juego.\n");
     while (scanf("%i", & aux) == 0 || (aux != 0 && aux != 1)) {
@@ -98,7 +122,7 @@ void menu() {
         while (getchar() != '\n');
         switch (nivel) {
             case 'a':
-                printf("%s Ha elegido el nivel Bajo.\nA continuaci%cn empieza el juego...\nSUERTE!!!!!\n",nombre,162);
+                printf("%s Ha elegido el nivel Bajo.\nA continuaci%cn empieza el juego...\nSUERTE!!!!!\n",persona.a,162);
                 system("pause>>null \n\n");
                 system("cls");
                 historia1();
@@ -892,6 +916,3 @@ void historial(char letra, char *palabra, char* vector, int largo, int* flag, in
 	}
 	return;
 }
-
-
-		
