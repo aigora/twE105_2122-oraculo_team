@@ -7,7 +7,6 @@
 #include<conio.h>
 #include<time.h>
 
-
 #define NUM_PALABRAS 16           //Numero de palabras
 #define MAX_STRING 20            //Longitud máxima de la cadena inicial.
 #define NUM_INTENTOS 5
