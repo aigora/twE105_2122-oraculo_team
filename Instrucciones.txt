@@ -1,0 +1,12 @@
+Bienvenido a las instrucciones del Scape Room de oraculo team!!!!
+
+Instrucciones:
+->Introduccir correctamente el nombre del jugador.
+->Pulsar 1 para empezar el juego.Se recomienda empezar con el nivel facil y de ahi ir subiendo la dificultad hasta el ultimo nivel.Para una mejor experiencia en el juego.
+->Jugar solo, ya que el juego esta pensado para una persona.
+
+Tener en cuenta:
+->Las adivinanzas las tienes que poner en minusculas. 
+->En el juego de adivinar el numero tendras que poner unicamente numeros, NO letras!
+
+Y por ultimo disfrutar de este programa ya que Oraculo team lo ha hecho con todo el cariño para que lo puedas disfrutar.
