@@ -89,7 +89,7 @@ printf("apodo: ");
 scanf("%10s",persona.a);
 printf("telefono(recibiras notificaciones de las novedades del juego): ");
 scanf("%i",&persona.t);
-printf("fecha de nacimiento : ");
+printf("fecha de nacimiento(presiona enter cada vez que introduzcas el dia, el mes y el año) : ");
 scanf("%i %i %i",&persona.fn.d,&persona.fn.m,&persona.fn.a);
 printf("\n%s\n%s\n%i-%i-%i\n",persona.n,persona.a,persona.fn.d,persona.fn.m,persona.fn.a);
 
